@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1131213307889428d09f7db05ff63a, type: 3}
+  m_Name: CubeSettings
+  m_EditorClassIdentifier: 
+  cubeTypeSettings:
+  - type: 0
+    prefabPath: 
+    defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  - type: 1
+    prefabPath: Prefabs/BasicCube
+    defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  - type: 2
+    prefabPath: Prefabs/JumpBoostCube
+    defaultColor: {r: 0.42002776, g: 0.745283, b: 0.39021894, a: 1}
+  - type: 3
+    prefabPath: Prefabs/BlindessCube
+    defaultColor: {r: 0.12530436, g: 0.120016016, b: 0.2924528, a: 1}
+  - type: 4
+    prefabPath: Prefabs/TriggerCube
+    defaultColor: {r: 0.7177968, g: 0.735849, b: 0.32280168, a: 1}
+  - type: 5
+    prefabPath: Prefabs/AppearingCube
+    defaultColor: {r: 0.41509432, g: 0.40530434, b: 0.40530434, a: 1}
+  - type: 6
+    prefabPath: Prefabs/ExplosionCube
+    defaultColor: {r: 1, g: 0, b: 0, a: 1}
+  - type: 7
+    prefabPath: Prefabs/Portal
+    defaultColor: {r: 1, g: 0, b: 0, a: 1}
