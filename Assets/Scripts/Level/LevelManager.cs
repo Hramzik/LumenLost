@@ -30,23 +30,32 @@ public class LevelManager : MonoBehaviour
     public void CompleteCurrentLevel()
     {
         currentLevelIndex++;
-        
-        if (currentLevelIndex >= levels.Count) Debug.Log("sigma");
-        else                                   LoadLevel(currentLevelIndex);
+        if (currentLevelIndex < levels.Count) { LoadScene(); return; }
+        if (currentLevelIndex == levels.Count) { LoadFinalScene(); return; }
+
+        // Restart game
+        currentLevelIndex = 0;
+        LoadScene();
     }
 
     public void ReloadCurrentLevel()
     {
-        LoadLevel(currentLevelIndex);
+        if (currentLevelIndex < levels.Count) LoadScene();
+        else                                  LoadFinalScene();
+
         BlindnessCube.canStartCoroutine = true;
         BlindnessCube.effectCoroutine = null;
         BlindnessCube.coroutineStarter = null;
     }
 
-    private void LoadLevel(int index)
+    private void LoadScene()
     {
-        currentLevelIndex = Mathf.Clamp(index, 0, levels.Count - 1);
         SceneManager.LoadScene("SampleScene");
+    }
+
+    private void LoadFinalScene()
+    {
+        SceneManager.LoadScene("FinalLevel");
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
